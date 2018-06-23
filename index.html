@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>David NewHmalet - ISCG 6420 HOMEWORK PAGE - 1487906 - v1.0.0</title>
+
+    <noscript>
+    <h1>
+        WARNING
+        <p />
+    </h1>
+        THIS WEB PAGE WILL NOT WORK WITHOUT JAVASCRIPT.
+    </noscript>
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <script type="text/javascript" src="davidcanvas.js"></script>
+    <script type="text/javascript" src="application.js"></script>
+    <script type="text/javascript" src="part1.js"></script>
+
+    <script type="text/javascript">
+        function reloadCurrentPage(qs) {
+            window.location.assign(qs);
+        }
+    </Script>
+
+</head>
+
+<body>
+
+    <div class="mainFlexBlock">
+        <div class="headBlock">
+            <!-- head block include ADS bar and nav bar -->
+            <div class="headBar">
+                <div class="headLogo">
+                    <!-- home page logo -->
+                    <!-- special image, do not put into img folder -->
+                    <img class="logoBugImg" onclick="reloadCurrentPage()" title="site logo, double click to switch on/off auto refresh" src="home-logo-v1.0.0.png" alt="home-logo-imgs"></img>
+                </div>
+                <div class="headText">
+                    <!-- home page ads -->
+                    <a href="../">David And Ivy - ISCG 6420 ASSISMENT 2 - 1487906/1465253 - v1.0.0</a>
+                </div>
+            </div>
+            <!-- end ad-bar -->
+            <div class="seperator">
+                <hr>
+            </div>
+            <!-- nav bar include nav index entries and search blox -->
+            <div class="navBar">
+                <div class="btnBar">
+                    <button class="menuBtn" id="bookMovie" onclick="showContent(1);">Book Movie</button>
+                    <button class="menuBtn" id="playGame" onclick="showContent(2);">Play Game</button>
+                    <button class="menuBtn" id="coolProject" onclick="showContent(3);">Document</button>
+                </div>
+            </div>
+            <div class="seperator">
+                <hr>
+            </div>
+            <!-- end nav-bar -->
+        </div>
+        <!-- end head -->
+        <div class="mainBodyBlock">
+            <div class="moviecontent" id="moveiBlock">
+                <div id="booking" class="contentItem">
+                    <div id="roomSelector" class="btnBar">
+                        <button class="menuBtn" id="Florence" onclick="changeLayout(1);">Florence Room</button>
+                        <button class="menuBtn" id="Ronald" onclick="changeLayout(2);">Ronald Room</button>
+                    </div>
+                    <div class="btnBar" id="seatHint">
+                        <img id="tipImg01" src="img/seat4.png" class="tipImg" />
+                        <img id="tipImg02" src="img/seat5.png" class="tipImg" />
+                        <img id="tipImg03" src="img/seat6.png" class="tipImg" />
+                    </div>
+                    <div id="priceDiv">
+                        <p class="priceText" id="priceText">Please select seat.</p>
+                    </div>
+                    <div id="bookProcess">
+                        <button class="btnPay" id="btnRet" style="visibility: visible;" onclick="reloadCurrentPage('./?p=1');">Reset</button>
+                        <button class="btnPay" id="btnFlorencePay" onclick="florencePay();">Pay</button>
+                        <button class="btnPay" id="btnRonaldPay" onclick="ronaldPay();">Pay</button>
+                    </div>
+                    <div id="roomNameDiv">
+                        <h1 id="roomName" style="margin-left:30ex">Florence Room Layout</h1>
+                    </div>
+                    <div id="roomShowDiv">
+                        <table id="florenceSeat"></table><br/>
+                    </div>
+                </div>
+            </div>
+            <div class="mainCanvasBlock" id="canvasgame">
+                <div class="CanvasBlock" id="mainBlock">
+                    <div id="maincanvas">main canvas holder</div>
+                </div>
+                <div class="CanvasBlock" id="auxBlock">
+                    <div id="auxcanvas">aux canvas holder</div>
+                </div>
+                <div class="gameusage" id="gameusage">
+                    <p />
+                    <h4>
+                        <ul>
+                            <li>MUSIC: background music on/off</li>
+                            <li>Vol+: increase music volume</li>
+                            <li>Vol-: decrease music volume</li>
+                            <li>START/RESET/SPACEBAR: start/reset game</li>
+                            <li>Arrow Keys: move Mrs.X</li>
+                        </ul>
+                    </h4>
+                </div>
+            </div>
+            <div id="coolproject" class="docItem" style="display: none;">
+                <img id="docImg01" src="img/xmlDataDesign.png" class="docImg" />
+                <img id="docImg02" src="img/bookingDesign.png" class="docImg" />
+                <img id="docImg03" src="img/storyBoard1.png" class="docImg" />
+                <img id="docImg04" src="img/storyBoard2.png" class="docImg" />
+                <img id="docImg05" src="img/p1Test.png" class="docImg" />
+                <img id="docImg05" src="img/p2Test.png" class="docImg" />
+
+            </div>
+        </div>
+        <!-- end of mainBodyBlock -->
+    </div>
+    <!-- end of mainFlexBlock -->
+
+    <!-- LATER JAVASCRIPT -->
+    <!-- run JavaScript here -->
+    <script type="text/javascript">
+        part1init(1);
+        // setInterval(reloadCurrentPage, 8000);
+    </script>
+    <!-- END OF HOMEWORK -->
+</body>
+
+</html>
